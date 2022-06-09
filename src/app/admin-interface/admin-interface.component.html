@@ -1,0 +1,41 @@
+<div id="viewport">
+  <!-- Sidebar -->
+  <div id="sidebar">
+
+    <ul class="nav">
+      <li>
+        <a routerLink="displayUsers">
+<h1></h1>        </a>
+      </li>
+      <li>
+        <a routerLink="displayUsers">
+          <i class="fa-solid fa-table-cells-large"></i> Voir Users
+        </a>
+      </li>
+      <li>
+        <a routerLink="createUser">
+          <i class="fa-solid fa-table-cells-large"></i> create Users
+        </a>
+      </li>
+
+
+    </ul>
+  </div>
+  <!-- Content -->
+  <div id="content">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#"><i class="zmdi zmdi-notifications text-danger"></i>
+            </a>
+          </li>
+          <li> <a style="cursor: pointer" (click)="logOut()"> <i class="fa-solid fa-user fa-lg" style="margin-right: 5px;"></i>Hi <b>Admin</b></a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

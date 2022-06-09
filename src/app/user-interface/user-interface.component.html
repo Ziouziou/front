@@ -1,0 +1,59 @@
+<div id="viewport">
+  <!-- Sidebar -->
+  <div id="sidebar">
+
+    <ul class="nav">
+      <li>
+        <a routerLink="voirdn">
+          <i ></i>
+        </a>
+      </li>
+      <li *ngIf="role=='Analyste'">
+        <a routerLink="voirdn">
+          <i class="fa-solid fa-table-cells-large"></i> Voir donees nettoyees
+        </a>
+      </li>
+      <!--
+      <li>
+        <a routerLink="addTier">
+          <i class="fa-solid fa-calendar-plus"></i> Gestion Des Tiers
+        </a>
+      </li>
+      !-->
+      <li>
+        <a routerLink="bi">
+          <i class="fa-solid fa-calendar-plus"></i> Consulter Report BI
+        </a>
+      </li>
+      <li *ngIf="role=='Agent'">
+        <a routerLink="calculator">
+          <i class="fa-solid fa-calendar-plus"></i> Calculator
+        </a>
+      </li>
+      <li *ngIf="role=='Analyste'">
+        <a routerLink="mlpartie">
+          <i class="fa-solid fa-calendar-plus"></i> ML
+        </a>
+      </li>
+
+
+    </ul>
+  </div>
+  <!-- Content -->
+  <div id="content">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#"><i class="zmdi zmdi-notifications text-danger"></i>
+            </a>
+          </li>
+          <li> <a style="cursor: pointer" (click)="logOut()"> <i class="fa-solid fa-user fa-lg" style="margin-right: 5px;"></i>Hi <b>{{username}}</b></a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

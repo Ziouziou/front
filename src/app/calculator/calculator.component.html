@@ -1,0 +1,334 @@
+<div class="container"  xmlns="http://www.w3.org/1999/html">
+  <h3> Prediction calculator </h3>
+  <form [formGroup]="addTier">
+    <hr>
+    <!-- --------------Row 1------------------------ !-->
+
+    <div class="row">
+      <!-- -------------Col1-------------------------- !-->
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Segment : </label>
+          <br>
+          <input formControlName="segment" type="radio" value="Particuler" name="segment" id="segm" >
+          <label for="segm">Particuler</label>
+          <br>
+          <input formControlName="segment" type="radio" value="Professionel" name="segment" id="prof">
+          <label for="prof">Professionel</label>
+
+        </div>
+      </div>
+      <!-- --------------COL2------------------------- !-->
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Sexe : </label>
+          <br>
+          <input formControlName="sexe" type="radio" name="sexe" value="Masculin" id="masculien">
+          <label for="masculien" >Masculin</label>
+
+          <br>
+          <input formControlName="sexe" type="radio" name="sexe" value="Feminin" id="Feminin">
+          <label for="Feminin" >Feminin</label>
+
+        </div>
+      </div>
+    </div>
+    <!-- --------------ROW 2------------------------- !-->
+
+
+
+    <hr>
+    <div class="row">
+      <!-- -------------Col1-------------------------- !-->
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Employeur Client : </label>
+          <br>
+          <input type="radio" formControlName="employeurClient" value="EmpC1" name="employeurClient"  id="EmpC1">
+          <label for="EmpC1">EmpC1</label>
+
+          <br>
+          <input type="radio" name="employeurClient" formControlName="employeurClient" value="EmpC2" id="EmC2">
+          <label for="EmC2">EmC2</label>
+
+        </div>
+      </div>
+      <!-- -------------Col2-------------------------- !-->
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Code direction : </label>
+          <br>
+          <input type="radio" formControlName="codeDirection" value="Z610"  name="codeDirection" id="code1">
+          <label for="code1">Z 610</label>
+
+          <br>
+          <input type="radio"  formControlName="codeDirection" value="Z510" name="codeDirection" id="code2">
+          <label for="code2">Z 510</label>
+          <br>
+          <input type="radio"  formControlName="codeDirection" value="Z500" name="codeDirection" id="code3">
+          <label for="code3">Z 500</label>
+
+        </div>
+      </div>
+    </div>
+    <!-- ---------------Row 3--------------------- !-->
+
+    <hr>
+    <div class="row">
+      <!-- -------------Col1-------------------------- !-->
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="codeAgence">Code Agence : </label>
+          <br>
+          <input type="number" class="form-control"  placeholder="15KB10"  id="codeAgence" formControlName="codeAgence">
+
+
+        </div>
+      </div>
+      <!-- -------------Col2-------------------------- !-->
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="age">Age : </label>
+          <br>
+          <input type="number" class="form-control" placeholder="24" formControlName="age" id="age">
+
+
+        </div>
+      </div>
+    </div>
+    <!-- --------------Row 4----------------------- !-->
+    <hr>
+    <div class="row">
+      <!-- --------------Col 1----------------------- !-->
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="Anciennete">Anciennete : </label>
+          <br>
+          <input formControlName="anciennete" type="number" class="form-control" placeholder="0"  id="Anciennete">
+
+
+        </div>
+      </div>
+      <!-- --------------Col 2----------------------- !-->
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="maxcredit">Max credit</label>
+          <input formControlName="maxCredit" type="number" class="form-control" placeholder="0" id="maxcredit">
+        </div>
+      </div>
+    </div>
+    <!-- ----------------Row 5------------------------ !-->
+    <hr>
+    <div class="row">
+
+      <!-- --------------Col 1----------------------- !-->
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="mincredit">Min credit</label>
+          <input formControlName="minCredit" type="number" class="form-control" placeholder="0" id="mincredit">
+        </div>
+      </div>
+
+      <!-- --------------Col 2----------------------- !-->
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="revenuMensuel">Revenu Mensuel : </label>
+          <br>
+          <input formControlName="revenuMensuel" type="number" class="form-control" placeholder="0"  id="revenuMensuel">
+
+
+        </div>
+      </div>
+    </div>
+    <!-- ------------------ROW 7----------------------- !-->
+    <hr>
+    <div class="row">
+      <!-- ------------------COL 1----------------------- !-->
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="Duree Sommeil">Duree Sommeil:</label>
+          <input type="number" formControlName="dureeSommeil" class="form-control" placeholder="0"  id="Duree Sommeil">
+        </div>
+      </div>
+      <!-- ------------------COL 2----------------------- !-->
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="Nombre Mouvement Credit">Nombre Mouvement Credit:</label>
+          <input type="number" formControlName="nbrMouvementCredit" class="form-control" placeholder="0" id="Nombre Mouvement Credit">
+        </div>
+      </div>
+    </div>
+    <!-- --------------ROW 8------------------------ !-->
+    <hr>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="Nombre Mouvement Debit">Nombre Mouvement Debit:</label>
+          <input type="number" formControlName="nbrMouvementDebit" class="form-control" placeholder="0" id="Nombre Mouvement Debit">
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="Nombre De Comptes Ouverts">Nombre De Comptes Ouverts:</label>
+          <input formControlName="nbrComptesOuverts" type="number" class="form-control" placeholder="0" id="Nombre De Comptes Ouverts">
+        </div>
+      </div>
+    </div>
+    <!-- ---------------ROW 9----------------------- !-->
+    <hr>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="risklass">Risk Class</label>
+          <select class="form-control"  formControlName="riskClass" id="risklass">
+            <option value="1"> 1</option>
+            <option value="2"> 2</option>
+            <option value="3"> 3</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="nbrAbn">Nombre D'abonnements : </label>
+          <input class="form-control"  formControlName="nbrAbonnements" id="nbrAbn" type="number" placeholder="0">
+
+        </div>
+      </div>
+    </div>
+    <!-- -------------------------------------------- !-->
+    <hr>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="nbrEng">Nombre D'engagement finis : </label>
+          <input class="form-control" formControlName="nbrEngagementFinis" id="nbrEng" type="number" placeholder="Nombre D'engagement finis">
+
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="EnFinPeriode">Encours Fin Periode : </label>
+          <input class="form-control" formControlName="enoursFinPeriode"  id="EnFinPeriode" type="number" placeholder="Encours Fin Periode">
+
+        </div>
+      </div>
+    </div>
+    <!-- -------------------------------------------- !-->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="Impaye Fin Periode">Impaye Fin Periode : </label>
+          <input class="form-control"  formControlName="impayeFinPeriode" id="Impaye Fin Periode" type="number" placeholder="Impaye Fin Periode">
+
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="Nombre De Periode Impayes">Nombre De Periode Impayes : </label>
+          <input class="form-control" formControlName="NbrPeriodeImpayes" id="Nombre De Periode Impayes" type="number" placeholder="Nombre De Periode Impayes">
+
+        </div>
+      </div>
+
+
+
+
+    </div>
+    <!-- ------------------------------------------------------------------- -->
+    <br>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="Solde Moyen Mensuel">Solde Moyen Mensuel : </label>
+          <input class="form-control" formControlName="soldeMoyenMensuel" id="Solde Moyen Mensuel" type="number" placeholder="Solde Moyen Mensuel">
+
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="Mouvement debit moyenne">Mouvement debit moyenne : </label>
+          <input class="form-control" formControlName="mouvementDebitMoyenne" id="Mouvement debit moyenne" type="number" placeholder="Mouvement debit moyenne">
+
+        </div>
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------- -->
+    <br>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="Mouvement debit moyenne"> Etat civil : </label>
+          <select class="form-control" multiple formControlName="etatCivil">
+            <option value="1">
+              1
+            </option>
+            <option value="2">
+              2
+            </option>
+            <option value="3">
+              3
+            </option >
+
+            <option value="4">
+              4
+            </option>
+          </select>
+
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="Mouvement debit moyenne"> Situation contractuelle : </label>
+          <select class="form-control" multiple  formControlName="situationContractuelle" >
+            <option value="1">
+              1
+            </option>
+            <option value="2">
+              2
+            </option>
+
+            <option value="3">
+              3
+            </option>
+
+            <option value="4">
+              4
+            </option>
+          </select>
+
+        </div>
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------- -->
+    <br>
+    <div class="row">
+
+    </div>
+  </form>
+
+  <button type="submit" class="btn btn-primary" (click)="add()">Submit</button>
+
+  <div class="alert alert-warning" *ngIf="inValid" role="alert">
+    <span style="text-align: center"> Some Inputs Are Empty ,Please Try Again</span>
+  </div>
+
+  <div class="alert alert-success" *ngIf="Valid" role="alert">
+    <span style="text-align: center"> your request is successfully submitted</span>
+  </div>
+</div>
+
+
+<p>
+  {{this.result}}
+</p>

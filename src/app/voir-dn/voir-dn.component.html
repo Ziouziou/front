@@ -1,0 +1,74 @@
+
+
+
+<h4 id= "h1"> donees nettoyees</h4>
+<div class="table-wrapper">
+
+<table class="fl-table"  style="width: 700px;height:800px;overflow-x:scroll;margin:auto;margin-top: 100px">
+
+
+
+  <tbody>
+  <tr class="thead-dark" >
+    <th scope="col" >ancienne_classe_risque</th>
+    <th scope="col">classe_risque_actuelle</th>
+    <th scope="col">anciennete</th>
+    <th scope="col">sexe_rec</th>
+    <th scope="col">situation_contractuelle</th>
+    <th scope="col">convention</th>
+    <th scope="col">employeur_client</th>
+    <th scope="col">rupture_revenu</th>
+    <th scope="col">mvt_debit_moyen</th>
+    <th scope="col">duree_sommeil</th>
+    <th scope="col">max_credit</th>
+    <th scope="col">min_debit</th>
+    <th scope="col">nbr_mvt_credit</th>
+    <th scope="col">nbr_mvt_debit</th>
+    <th scope="col">nbr_open_comptes</th>
+    <th scope="col">nbr_closed_comptes</th>
+    <th scope="col">nbr_abonnements</th>
+    <th scope="col">nbr_placements_actifs</th>
+    <th scope="col">nbr_placements_echus</th>
+    <th scope="col">nbr_open_engagements</th>
+    <th scope="col">solde_moyen_mensuel</th>
+    <th scope="col">Engagement_Secteur</th>
+    <th scope="col">anciennete_dern_eng_anticip</th>
+    <th scope="col">sortie_risque</th>
+    <th scope="col">revenu_mensuel_y</th>
+
+  </tr>
+  <tr *ngFor="let row of allTiers">
+
+    <td>{{row[0]}}</td>
+    <td>{{row[1]}}</td>
+    <td>{{row[2]}}</td>
+    <td>{{row[3]}}</td>
+    <td>{{row[3]}}</td>
+    <td>{{row[3]}}</td>
+    <td>{{row[3]}}</td>
+    <td>{{row[3]}}</td>
+    <td>{{row[3]}}</td>
+    <td>{{row[3]}}</td>
+    <td>{{row[3]}}</td>
+    <td>{{row[3]}}</td>
+    <td>{{row[3]}}</td>
+
+    <td>{{row[3]}}</td>
+    <td>{{row[3]}}</td>
+    <td>{{row[3]}}</td>
+    <td>{{row[3]}}</td>
+    <td>{{row[3]}}</td>
+    <td>{{row[3]}}</td>
+    <td>{{row[3]}}</td>
+    <td>{{row[3]}}</td>
+    <td>{{row[3]}}</td>
+    <td>{{row[3]}}</td>
+    <td>{{row[3]}}</td>
+    <td>{{row[3]}}</td>
+    <td><i class="fa-solid fa-trash-can fa-lg" style="color: red;cursor: pointer" (click)="delete(row.id)"> </i></td>
+
+  </tbody>
+</table>
+
+</div>
+

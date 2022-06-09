@@ -1,0 +1,42 @@
+<div style="background-color: #008bd0
+;padding-bottom: 230px;">
+  <section class="sign-in" xmlns="http://www.w3.org/1999/html">
+    <div class="container" style="text-align: center" >
+      <img src="assets/Logo_STB__1_-removebg-preview.png" style="width: 300px">
+
+      <div class="signin-content" >
+        <div class="signin-image">
+          <figure>
+            <img src="assets/images/signin-image.jpg" alt="sing up image">
+          </figure>
+        </div>
+        <div class="signin-form">
+          <h2 class="form-title" style="text-align: left">Sign In</h2>
+          <form method="POST" class="register-form" id="login-form" [formGroup]="signInForm">
+            <div class="form-group">
+              <label for="email"><i class="zmdi zmdi-account material-icons-name"></i></label>
+              <input type="email"  name="email" id="email" placeholder="Your Email" formControlName="email"/>
+            </div>
+            <div
+              class="alert alert-danger" style="margin-top: -25px;"  role="alert" *ngIf="this.signInForm.controls['email'].status== 'INVALID' &&this.signInForm.controls['email'].touched ">
+              <span>  Email is Require</span>
+            </div>
+            <div class="form-group">
+              <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+              <input type="password" name="your_pass" id="your_pass" formControlName="password" placeholder="Password"/>
+            </div>
+            <div class="alert alert-danger" style="margin-top: -25px;"  role="alert" *ngIf="this.signInForm.controls['password'].status== 'INVALID' &&this.signInForm.controls['password'].touched ">
+              <span>  Password is Require</span>
+            </div>
+            <div class="form-group form-button">
+              <input type="submit" name="signin" id="signin" class="form-submit" style="text-align: left" (click)="checkData()" value="Log in"/>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="this.invalidData">
+        You have entered incorrect data. Please try again
+      </div>
+    </div>
+  </section>
+</div>
