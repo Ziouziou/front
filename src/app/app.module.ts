@@ -17,9 +17,23 @@ import { MLpartieComponent } from './mlpartie/mlpartie.component';
 import { FinancierComponent } from './financier/financier.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { DisplayUsersComponent } from './display-users/display-users.component';
-import { GistModule } from '@sgbj/angular-gist';
 import { EditUserComponent } from './edit-user/edit-user.component';
+import {PlotlyModule} from "angular-plotly.js";
+import * as PlotlyJS from 'plotly.js-dist-min';
+import { DataVisioComponent } from './data-visio/data-visio.component';
+import { DataVisiSituationCComponent } from './data-visi-situation-c/data-visi-situation-c.component';
+import { DataVisiContratDistributionComponent } from './data-visi-contrat-distribution/data-visi-contrat-distribution.component';
+import { GetOldClassSelonSexeDataVisoComponent } from './get-old-class-selon-sexe-data-viso/get-old-class-selon-sexe-data-viso.component';
+import { GetSegmentationComponent } from './get-segmentation/get-segmentation.component';
+import { GetCivilEtatComponent } from './get-civil-etat/get-civil-etat.component';
+import { GetCurrentClassComponent } from './get-current-class/get-current-class.component';
+import { GetClientDistComponent } from './get-client-dist/get-client-dist.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { CalculatorResultComponent } from './calculator-result/calculator-result.component';
 
+
+PlotlyModule.plotlyjs = PlotlyJS;
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,13 +50,25 @@ import { EditUserComponent } from './edit-user/edit-user.component';
     FinancierComponent,
     CreateUserComponent,
     DisplayUsersComponent,
-    EditUserComponent
+    EditUserComponent,
+    DataVisioComponent,
+    DataVisiSituationCComponent,
+    DataVisiContratDistributionComponent,
+    GetOldClassSelonSexeDataVisoComponent,
+    GetSegmentationComponent,
+    GetCivilEtatComponent,
+    GetCurrentClassComponent,
+    GetClientDistComponent,
+    CalculatorResultComponent
   ],
   imports: [
     HttpClientModule,
     ReactiveFormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PlotlyModule,
+    MatDialogModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

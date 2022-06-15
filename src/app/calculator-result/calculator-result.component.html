@@ -1,0 +1,9 @@
+<h1 mat-dialog-title style="text-align: center">Resultat</h1>
+
+<mat-dialog-content>
+
+  <h2 *ngIf="data.prediction == 0" style="color: red;text-align: center"> This client is likely to be dangerous, he/she will not fullfil the debbt and will get to a higher class </h2>
+  <h2 *ngIf="data.prediction == 1" style="color: green;text-align: center">  This client is likely to be Safe, he/she will  fullfil the debbt and will get to a lower class  </h2>
+
+</mat-dialog-content>
+

@@ -12,6 +12,7 @@ import {MLpartieComponent} from "./mlpartie/mlpartie.component";
 import {CreateUserComponent} from "./create-user/create-user.component";
 import {DisplayUsersComponent} from "./display-users/display-users.component";
 import {EditUserComponent} from "./edit-user/edit-user.component";
+import {DataVisioComponent} from "./data-visio/data-visio.component";
 
 const routes: Routes =
   [
@@ -21,13 +22,15 @@ const routes: Routes =
                   {path:'addTier',component:AddTiersComponent},
                   {path:'voirdn',component:VoirDNComponent},
                   {path:'bi',component:BiComponent},
-                  {path:'calculator',component:CALCULATORComponent}]},
+                  {path:'calculator',component:CALCULATORComponent},
+                  {path:'visio',component:DataVisioComponent }]},
     {path :'AdminInterface',component:AdminInterfaceComponent,
       children:[
         {path:'voirAgent',component: AgentComponent},
         {path:'createUser',component: CreateUserComponent},
         {path:'displayUsers',component: DisplayUsersComponent},
-        {path:'editUsers/:i',component: EditUserComponent}]}
+        {path:'editUsers/:i',component: EditUserComponent}
+      ]}
   ];
 
 @NgModule({

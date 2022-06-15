@@ -24,11 +24,11 @@
         <div class="form-group">
           <label>Sexe : </label>
           <br>
-          <input formControlName="sexe" type="radio" name="sexe" value="Masculin" id="masculien">
+          <input formControlName="sexe" type="radio" name="sexe" value="1" id="masculien">
           <label for="masculien" >Masculin</label>
 
           <br>
-          <input formControlName="sexe" type="radio" name="sexe" value="Feminin" id="Feminin">
+          <input formControlName="sexe" type="radio" name="sexe" value="0" id="Feminin">
           <label for="Feminin" >Feminin</label>
 
         </div>
@@ -46,11 +46,11 @@
         <div class="form-group">
           <label>Employeur Client : </label>
           <br>
-          <input type="radio" formControlName="employeurClient" value="EmpC1" name="employeurClient"  id="EmpC1">
+          <input type="radio" formControlName="employeurClient" value="1" name="employeurClient"  id="EmpC1">
           <label for="EmpC1">EmpC1</label>
 
           <br>
-          <input type="radio" name="employeurClient" formControlName="employeurClient" value="EmpC2" id="EmC2">
+          <input type="radio" name="employeurClient" formControlName="employeurClient" value="2" id="EmC2">
           <label for="EmC2">EmC2</label>
 
         </div>
@@ -61,14 +61,14 @@
         <div class="form-group">
           <label>Code direction : </label>
           <br>
-          <input type="radio" formControlName="codeDirection" value="Z610"  name="codeDirection" id="code1">
+          <input type="radio" formControlName="codeDirection" value="1"  name="codeDirection" id="code1">
           <label for="code1">Z 610</label>
 
           <br>
-          <input type="radio"  formControlName="codeDirection" value="Z510" name="codeDirection" id="code2">
+          <input type="radio"  formControlName="codeDirection" value="2" name="codeDirection" id="code2">
           <label for="code2">Z 510</label>
           <br>
-          <input type="radio"  formControlName="codeDirection" value="Z500" name="codeDirection" id="code3">
+          <input type="radio"  formControlName="codeDirection" value="3" name="codeDirection" id="code3">
           <label for="code3">Z 500</label>
 
         </div>
@@ -317,7 +317,7 @@
     </div>
   </form>
 
-  <button type="submit" class="btn btn-primary" (click)="add()">Submit</button>
+  <button type="submit" class="btn btn-primary" (click)="add();">Submit</button>
 
   <div class="alert alert-warning" *ngIf="inValid" role="alert">
     <span style="text-align: center"> Some Inputs Are Empty ,Please Try Again</span>
@@ -328,7 +328,3 @@
   </div>
 </div>
 
-
-<p>
-  {{this.result}}
-</p>
